@@ -1,2 +1,2 @@
-sudo sh -c 'apt update && apt install -y python python-rpi.gpio xinet sox pandoc && sudo cp etc/asounds.conf /etc/ && sudo cp etc/xinetd.d/run_alert /etc/xinetd.d/'
+sudo sh -c 'apt update && apt upgrade -y && apt install -y python python-rpi.gpio xinetd sox pandoc libsox-fmt-mp3 alsaplayer-jack xscreensaver && sudo cp etc/asounds.conf /etc/ && sudo cp etc/xinetd.d/run_alert /etc/xinetd.d/ && service xinetd restart'
 
