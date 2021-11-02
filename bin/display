@@ -1,0 +1,16 @@
+#!/bin/bash
+
+simonsays=$1
+
+case $simonsays in
+
+  'off')
+    vcgencmd display_power 0 > /dev/null
+  ;;
+  'on')
+    vcgencmd display_power 1 > /dev/null
+  ;;
+  *)
+   echo "Usage: display [on/off]"
+  ;;
+esac

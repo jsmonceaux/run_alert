@@ -1,0 +1,2 @@
+temp="$(python ~/bin/monitor-temp.py | grep temp | cut -d= -f2 | awk '{printf "(9/5)*%.*f+32\n", 1, $1}' | bc | xargs printf "%.*f F\n" 1)"
+echo $temp

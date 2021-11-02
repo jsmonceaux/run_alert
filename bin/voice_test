@@ -1,0 +1,1 @@
+ base64 -d /home/pi/last_call | sed 's/\t/\n/g' | sed '/^$/d' | grep ^"Nature\|^Address" -A1 | sed 's/\([A-Z a-z]\)\//\1 AND /g' | espeak -m -s 125 -v mb-us1 &> /dev/null

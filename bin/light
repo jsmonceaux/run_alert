@@ -1,0 +1,16 @@
+#!/bin/bash
+
+simonsays=$1
+
+case $simonsays in
+
+  'off')
+    python /home/pi/bin/lightoff.py
+  ;;
+  'on')
+    python /home/pi/bin/lighton.py
+  ;;
+  *)
+   echo "Usage: light [on/off]"
+  ;;
+esac
