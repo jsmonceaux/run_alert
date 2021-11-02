@@ -1,0 +1,12 @@
+service run_alert
+{
+ disable = no
+ type = UNLISTED
+ socket_type = stream
+ protocol = tcp
+ wait = no
+ server = /home/pi/bin/run_alert
+ bind = 0.0.0.0
+ port = 9999
+ user = root
+}
