@@ -1,7 +1,12 @@
 #!/bin/bash
 
-#play -n synth 4.0 sin 600 &
-play -q /home/pi/sounds/leroy.swf.mp3 &> /dev/null &
+#play -q /home/pi/sounds/leroy.swf.mp3 &> /dev/null &
+
+#play -n synth 2.0 sine 10-1000 &> /dev/null
+
+#for i in {1..4}; do play -n synth 0.1 sine 500 &> /dev/null; done
+
+#play -n synth 0.5 sine 500 &> /dev/null &
 
 bash /home/pi/bin/monitor.sh > /dev/null &
 
@@ -9,5 +14,5 @@ timeout --foreground 1 cat > /home/pi/last_call
 
 base64 -d /home/pi/last_call | pandoc -f html -t markdown | grep -v '^\\\|^!' > /home/pi/last_call.txt &
 
-python /home/pi/bin/light.py > /dev/null &
+#python /home/pi/bin/light.py > /dev/null &
 
