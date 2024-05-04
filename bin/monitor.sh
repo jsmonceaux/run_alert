@@ -1,7 +1,7 @@
 #!/bin/bash
 
-display on
+/home/pi/bin/display on
 
 sleep 90
 
-display off
+/home/pi/bin/display off
