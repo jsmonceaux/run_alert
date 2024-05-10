@@ -12,7 +12,7 @@ bash /home/pi/bin/monitor.sh > /dev/null &
 
 timeout --foreground 1 cat > /home/pi/last_call
 
-base64 -d /home/pi/last_call | pandoc -f html -t markdown | grep -v '^\\\|^!' > /home/pi/last_call.txt &
+base64 -d /home/pi/last_call | pandoc -f html -t markdown | grep -v '^\\\|^!' | sed -z 's/\n\n\n/\n/g' > /home/pi/last_call.txt &
 
 #python /home/pi/bin/light.py > /dev/null &
 
